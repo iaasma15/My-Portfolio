@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+ <script src="quotes.js"></script>
+ 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script>
+        /*const QUOTEBOOK = [
+            {
+                quote:"Failure is a word unknown to me.",
+                author:"Muhammad Ali Jinnah"
+            },{
+                quote:"Words, without power, is mere philosophy.",
+                author:"Allama Iqbal"
+            },{
+                quote:"Do not show the face of Islam to others; instead show your face as the follower of true Islam representing character, knowledge, tolerance and piety",
+                author:"Sir Syed Ahmed Khan"
+            }
+        ];
+*/
+
+        window.onload = init;
+        function init() {
+         generateQuote()  
+        }
+
+        function generateQuote(){
+        
+        let quoteSize = QUOTEBOOK.length;
+        let randomIndex = Math.floor(Math.random() * quoteSize);
+        let randomQuoteData = QUOTEBOOK[randomIndex];
+        document.getElementById("tweet-quote").href = "https://twitter.com/intent/tweet?hashtags=quotes&amp;related=freecodecamp&amp;text=%22I%20am%20not%20a%20product%20of%20my%20circumstances.%20I%20am%20a%20product%20of%20my%20decisions.%22%20Stephen%20Covey";
+        document.getElementById("text").innerText = randomQuoteData.quote;
+        document.getElementById("author").innerText= randomQuoteData.author;
+    
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    
+<div class="container">
+    <div class="row py-5">
+        <div class="col-md-6 offset-md-3">
+
+    <wrapper id="quote-box" >
+        <div class="card">
+            <div class="card-header text-center">
+             Random Quote Machine 
+            </div>
+            <h5 class="card-title">
+        <div id="text"></div></h5>
+        <p class="card-text">
+    <div id="author"></div></p>
+
+
+
+        <button id="new-quote" class="btn btn-block btn-primary" onClick="generateQuote();">New Quote</button>
+        <a href="#" id="tweet-quote" target="_blank" class="btn btn-block btn-success">Tweet Quote</a> 
+   
+        <div class="card-body">
+             </div>
+          </div>
+</wrapper></div></div></div>
+
+
+
+
+
+    <script src = "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+    </script> 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
